@@ -1,3 +1,4 @@
+# No to Word.
 
 def ToWord(N):
     Result=''
