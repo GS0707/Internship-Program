@@ -1,3 +1,4 @@
+# Check how number are perfect number upto n.
 n=int(input("Enter the no. "))
 
 # check no. is grater than 6 or not
