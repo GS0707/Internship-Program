@@ -1,3 +1,5 @@
+# Count digits in Number.
+
 n=int(input("Enter the No. "))
 count=0
 
