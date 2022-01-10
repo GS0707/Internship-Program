@@ -1,3 +1,4 @@
+# Count Occurrences
 no=input("Enter the number: ")
 
 countDic = {}
