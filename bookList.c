@@ -183,7 +183,7 @@ int main()
 
     while (1)
     {
-        printf("\n\n 1:Create\t2.Insert\t3:Search\t4:Delete\t5:Print\t 6:Quite\nEnter your choice: ");
+        printf("\n\n 1:Create\t2.Insert\t3:Search\t4:Delete\t5:Print\t 6:Quit\nEnter your choice: ");
         scanf("%d", &choice);
         switch (choice)
         {
