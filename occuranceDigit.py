@@ -1,4 +1,4 @@
-# Count Occurrences
+#  Count Occurrences
 
 def countDigit(no):
     countDic = {}
