@@ -1,6 +1,6 @@
 n=int(input("Enter the no. "))
 
-# check no. is grater than 6 or not
+# check no. is greater than 6 or not
 if n<6:
   print("Smallest perfect no is 6. Enter again valid no.")
   exit(0)
