@@ -1,11 +1,14 @@
 # Count Occurrences
+
+def countDigit(no):
+    countDic = {}
+    for digit in no:
+        try:
+            countDic[digit]+=1
+        except:
+            countDic[digit]=1
+    return countDic
+
 no=input("Enter the number: ")
 
-countDic = {}
-
-for digit in no:
-  try:
-    countDic[digit]+=1
-  except:
-    countDic[digit]=1
-print(countDic)    
+print(countDigit(no))    
