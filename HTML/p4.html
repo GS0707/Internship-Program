@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        table {
+            border: 1px solid black;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        tr {
+            border-bottom: 1px solid black;
+        }
+
+        .half {
+            background-color: gainsboro;
+        }
+    </style>
+</head>
+
+<body>
+
+    <table cellspacing="10px" cellpadding="10px">
+        <tr class="half">
+            <td colspan="4" style="text-align: center;"> <strong> Complex Table</strong></td>
+        </tr>
+        <tr class="half">
+            <td colspan="3"><strong>Invoice #12345</strong></td>
+            <td><strong>25 January 2025</strong></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <strong>Pay To:</strong><br>
+                Acme biling Co.<br>
+                123 main st.<br>
+                cityvilla, Na 12345
+            </td>
+            <td colspan="2">
+                <strong>Customer:</strong><br>
+                John Smith<br>
+                321 Willow Way<br>
+                Southeast Northwestershire, MA 54321
+            </td>
+        </tr>
+        <tr class="half">
+            <td><strong>Name / Description</strong></td>
+            <td><strong>Qty.</strong></td>
+            <td><strong>@</strong></td>
+            <td><strong>Cost</strong></td>
+        </tr>
+        <tr>
+            <td>Paper Clips</td>
+            <td>100</td>
+            <td>0.01</td>
+            <td>10.00</td>
+        </tr>
+        <tr>
+            <td>Paper Clips</td>
+            <td>100</td>
+            <td>0.01</td>
+            <td>10.00</td>
+        </tr>
+        <tr>
+            <td>Staples(box)</td>
+            <td>100</td>
+            <td>1.0</td>
+            <td>100.00</td>
+        </tr>
+        <tr>
+            <td class="half" colspan="3"><strong> Subtotal</strong></td>
+            <td>110.00</td>
+        </tr>
+        <tr>
+            <td class="half" colspan="2"><strong>TAX</strong></td>
+            <td>8%</td>
+            <td>8.80</td>
+        </tr>
+        <tr>
+            <td class="half" colspan="3"><strong>Grand Total</strong></td>
+            <td>RS. 118.80</td>
+        </tr>
+    </table>
+
+</body>
+
+</html>
