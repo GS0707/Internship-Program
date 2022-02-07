@@ -1,0 +1,153 @@
+<html>
+<style>
+    body {
+        margin: 0%;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+    }
+
+    nav {
+        flex: 0.1;
+        background-color: aqua;
+    }
+
+    footer {
+        flex: 0.5;
+        background-color: brown;
+    }
+
+    ul {
+        list-style-type: none;
+        display: flex;
+        justify-content: flex-end;
+        /*  flex-dirc:row flex-wrap:wrap */
+        margin: 0%;
+    }
+
+    a {
+        display: block;
+        text-decoration: none;
+        padding: 20px;
+        text-align: center;
+    }
+
+    a:hover {
+        background-color: gray;
+        color: white;
+    }
+
+    @media all and (max-width: 600px) {
+        ul {
+            flex-flow: column wrap;
+            padding: 0%;
+        }
+
+    }
+
+    @media all and (max-width: 800px) {
+        ul {
+            justify-content: space-between;
+        }
+    }
+    .bo {
+        flex: 2;
+        display: flex;
+        flex-wrap: nowrap;
+        margin: 10px 10px;
+    }
+    .bo div{
+        margin: 0px 20px;
+    }
+    .b1{
+        background-color: cadetblue;
+    }
+    .b2{
+        background-color: chartreuse;
+    }
+    .b3{
+        background-color: chocolate;
+    }
+    @media all and (max-width:600px) {
+        .bo{
+            flex-flow: column wrap;
+            justify-content: space-between;
+        }
+        
+    }
+    footer{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    footer div{
+        background-color: aqua;
+        width: 80px;
+        height: 50px;
+        text-align: center;
+    }
+    @media all and (max-width:800px) {
+        footer{
+            flex-wrap: wrap;
+        }
+        
+    }
+</style>
+
+<body>
+    <nav>
+        <ul>
+            <li id="one">
+                <a href="#">Home</a>
+            </li>
+            <li>
+                <a href="#">Service</a>
+            </li>
+            <li>
+                <a href="#">About</a>
+            </li>
+            <li>
+                <a href="#">Log Out</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="bo">
+        <div class="b1">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Sit, exercitationem! Officia inventore facere beatae
+            delectus hic consequatur veritatis totam molestias,
+            accusamus minus nostrum maxime iste, quisquam nam
+            aspernatur sunt magni?
+        </div>
+        <div class="b2">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Sit, exercitationem! Officia inventore facere beatae
+            delectus hic consequatur veritatis totam molestias,
+            accusamus minus nostrum maxime iste, quisquam nam
+            aspernatur sunt magni?
+        </div>
+        <div class="b3">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Sit, exercitationem! Officia inventore facere beatae
+            delectus hic consequatur veritatis totam molestias,
+            accusamus minus nostrum maxime iste, quisquam nam
+            aspernatur sunt magni?
+        </div>
+    </div>
+    <footer>
+        <div class="1">Hello</div>
+        <div class="2">Hello</div>
+        <div class="3">Hello</div>
+        <div class="4">Hello</div>
+        <div class="5">Hello</div>
+        <div class="6">Hello</div>
+        <div class="7">Hello</div>
+        <div class="8">Hello</div>
+        <div class="9">Hello</div>
+        <div class="10">Hello</div>
+
+    </footer>
+</body>
+
+</html>

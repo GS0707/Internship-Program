@@ -1,0 +1,525 @@
+<html>
+
+<head>
+    <title>
+        Blog
+    </title>
+    <script src="https://kit.fontawesome.com/8e186ad8b3.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            margin: 0%;
+        }
+
+        #navbar>ul {
+            list-style-type: none;
+            background-color: #333;
+            height: 63px;
+           
+        }
+
+        .left {
+            float: left;
+        }
+
+        .right {
+            float: right;
+            padding: 20px 2px;
+            margin-right: 10px;
+        }
+
+        .right input,
+        button {
+            padding: 2px 5px;
+        }
+
+        .right button {
+            background-color: white;
+            border: none;
+            height: 28px;
+            cursor: pointer;
+        }
+
+        li a {
+            display: block;
+            padding: 20px 20px;
+            text-decoration: none;
+            color: white;
+        }
+
+        i {
+            height: 22px;
+        }
+
+        li a:hover {
+            background-color: #111;
+        }
+
+        .content {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 5% 0%;
+            height: 80%;
+        }
+
+        .content>.leftSidebar {
+            width: 20%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .content>.rightSidebar {
+            width: 25%;
+        }
+
+        .leftSidebar>.first>ul {
+            list-style-type: none;
+            border: 1px solid whitesmoke;
+            width: 99%;
+            margin: 0%;
+            padding: 0%;
+        }
+
+        #table1>li {
+            border-bottom: 1px solid #E8E8E8;
+            padding: 8px 10px;
+            font-size: small;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        #table1>li:nth-child(1) {
+            background-color: #E8E8E8;
+        }
+
+        .leftSidebar>.first {
+            background-color: white;
+            height: 55%;
+        }
+
+        .leftSidebar>.second {
+            background-color: white;
+            margin-top: 15px;
+            margin-bottom: 10px;
+            height: 53%;
+        }
+
+        .leftSidebar>.second>ul {
+            list-style-type: none;
+            border: 1px solid whitesmoke;
+            width: 99%;
+            margin: 0%;
+            padding: 0%;
+        }
+
+        #table2>li {
+            padding: 8px 10px;
+            font-size: small;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        #table2>li:nth-child(1) {
+            background-color: #E8E8E8;
+        }
+
+        #table2>li>button {
+            background-color: white;
+            border: 1px solid #E8E8E8;
+            border-radius: 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+            margin-top: 4px;
+        }
+
+        .content>.body {
+            width: 45%;
+        }
+
+        .body>#notification {
+            width: 100%;
+            height: 8%;
+            background-color: #F08080;
+            display: block;
+            border-radius: 5px;
+        }
+
+        .body>#notification>span {
+            color: #8B0000;
+            display: inline-block;
+            padding: 8px 5px;
+        }
+
+        .body>#notification>span>#msg {
+            font-size: small;
+            color: #B22222;
+        }
+
+        .body>#notification>span>button {
+            color: #8B0000;
+            display: inline;
+            margin-left: 130px;
+            background-color: #F08080;
+            border: none;
+            cursor: pointer;
+        }
+
+        .body>.blogs {
+            width: 100%;
+            height: 23%;
+            margin-top: 3%;
+            display: flex;
+        }
+
+        .body>.blogs>.img {
+            width: 50%;
+            height: 80%;
+            background-color: #E8E8E8;
+            border-radius: 2px;
+            margin-right: 5px;
+            display: flex;
+            align-items: center;
+        }
+
+        .body>.blogs>.text {
+            margin: 0%;
+        }
+
+        .body>.blogs>.text>span {
+            font-size: 30px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        .body>.blogs>.text>p {
+            margin: 1%;
+        }
+
+        .body>.share {
+            margin-left: 120px;
+            font-size: 13px;
+            color: #00BFFF;
+        }
+
+        .rightSidebar>#search>input {
+            width: 70%;
+            height: 30px;
+            border: 1px solid #a9a9a9;
+            border-radius: 5px;
+        }
+
+        .rightSidebar>#search>button {
+            background-color: white;
+            border: 1px solid #a9a9a9;
+            border-radius: 5px;
+        }
+
+        .rightSidebar>.leftSidebar>.first>#table1>li>div {
+            background-color: #E8E8E8;
+            font-size: 15px;
+            border: 1px solid #E8E8E8;
+            border-radius: 4px;
+            color: white;
+        }
+
+        .rightSidebar>.leftSidebar>.first>#table1>li>div>#f1 {
+            width: 93%;
+            background-color: green;
+            padding: 1px 10px;
+            border-radius: 4px;
+        }
+
+        .rightSidebar>.leftSidebar>.first>#table1>li>div>#s {
+            width: 75%;
+            background-color: #00b7eb;
+            padding: 1px 10px;
+            border-radius: 4px;
+        }
+
+        .rightSidebar>.leftSidebar>.first>#table1>li>div>#t {
+            width: 45%;
+            background-color: #daa520;
+            padding: 1px 10px;
+            border-radius: 4px;
+        }
+
+        .rightSidebar>.leftSidebar>.first>#table1>li>div>#f4 {
+            width: 30%;
+            background-color: #a52a2a;
+            padding: 1px 10px;
+            border-radius: 4px;
+        }
+
+        .end {
+            height: 60%;
+            background-color: #E8E8E8;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .end>.endItem {
+            margin-top: 40px;
+            display: inline;
+            height: 70%;
+            width: 20%;
+        }
+
+        .end>.endItem>#image {
+            display: flex;
+            justify-content: space-around;
+            height: 65%;
+        }
+
+        .end>.endItem>#image>.i1 {
+            margin: 0%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .end>.endItem>#image>.i2 {
+            margin: 0%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .end>.endItem>#image>.i1>.pimage1 {
+            height: 48%;
+            margin-top: 10px;
+            padding-right: 35px;
+            display: flex;
+            align-items: center;
+            border: 2px solid white;
+            border-radius: 3px;
+        }
+
+        .end>.endItem>#image>.i2>.pimage1 {
+            height: 48%;
+            margin-top: 10px;
+            padding-right: 35px;
+            display: flex;
+            align-items: center;
+            border: 2px solid white;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="navbar">
+        <ul>
+            <li class="left">
+                <a href="#">
+                    <i class="fas fa-globe-americas">Logo</i>
+                </a>
+            </li>
+            <li class="left"><a href="#">Home</a></li>
+            <li class="left"><a href="#">About</a></li>
+            <li class="left">
+                <a href="#">
+                    Services<i class="fas fa-caret-down"></i>
+                </a>
+            </li>
+            <li class="right"><button>Sign In</button></li>
+            <li class="right"><input type="password" placeholder="Password"></li>
+            <li class="right"><input type="text" placeholder="Email"></li>
+        </ul>
+    </div>
+    <div class="content">
+        <div class="leftSidebar">
+            <div class="first">
+                <ul id="table1">
+                    <li><i class="fa fa-random" aria-hidden="true">Completely Synergize</i></li>
+                    <li>Resource Taxing</li>
+                    <li>Premier Niche Market <span></span></li>
+                    <li>Dynamically Innovate</li>
+                    <li>Objectively Innovate</li>
+                    <li>Proactively Innovate</li>
+                </ul>
+            </div>
+            <div class="second">
+                <ul id="table2">
+                    <li>
+                        <i class="fas fa-cog">Dramatically Engage</i>
+                    </li>
+                    <li>
+                        Objectively Innovate Empowered
+                        manufactured products whereas
+                        parllel platforms. Holisticity
+                        predominante extensible testing
+                        asaad wesddd sqddessa qaesdee.
+                        Dreesreed asasase sa-sas<br>
+                        end.<br>
+                        <button>Engage</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="body">
+            <div id="notification">
+                <span>Synergize: <span id="msg">Seamlislly visualize qality intellect
+                        capital!!</span><button>x</button></span>
+            </div>
+            <div class="blogs">
+                <div class="img"><span style="font-size: 15px;margin-left: 25px;color:#a9a9a9;">120x120</span></div>
+                <div class="text">
+                    <span>Premier Niche Market</span><br>
+                    <p>Asdsdsd sdddc sdsdsc xsxss ffrfvsdvsf
+                        asdsdsd sdddc sdsdsc xsxss ffrfvsdvsf
+                        asdsdsd sdddc sdsdsc xsxss ffrfvsdvsf
+                        asdsdsd sdddc sdsdsc xsxss ffrfvsdvsf
+                    </p>
+                </div>
+            </div>
+            <div class="share">
+                <span><i class='fas fa-comment-alt'> 2 Comments</i></span>
+                <span><i class="fas fa-share"> 18 Shares</i></span>
+            </div>
+            <hr style="width: 100%; border: 1px solid #E8E8E8">
+            <div class="blogs">
+                <div class="img"><span style="font-size: 15px;margin-left: 25px;color:#a9a9a9;">120x120</span></div>
+                <div class="text">
+                    <span>Premier Niche Market</span><br>
+                    <p>Asdsdsd sdddc sdsdsc xsxss ffrfvsdvsf
+                        asdsdsd sdddc sdsdsc xsxss ffrfvsdvsf
+                        asdsdsd sdddc sdsdsc xsxss ffrfvsdvsf
+                        asdsdsd sdddc sdsdsc xsxss ffrfvsdvsf
+                    </p>
+                </div>
+            </div>
+            <div class="share">
+                <span><i class='fas fa-comment-alt'> 2 Comments</i></span>
+                <span><i class="fas fa-share"> 18 Shares</i></span>
+            </div>
+            <hr style="width: 100%; border: 1px solid #E8E8E8;">
+            <div class="blogs">
+                <div class="img"><span style="font-size: 15px;margin-left: 25px;color:#a9a9a9;">120x120</span></div>
+                <div class="text">
+                    <span>Premier Niche Market</span><br>
+                    <p>Asdsdsd sdddc sdsdsc xsxss ffrfvsdvsf
+                        asdsdsd sdddc sdsdsc xsxss ffrfvsdvsf
+                        asdsdsd sdddc sdsdsc xsxss ffrfvsdvsf
+                        asdsdsd sdddc sdsdsc xsxss ffrfvsdvsf
+                    </p>
+                </div>
+            </div>
+            <div class="share">
+                <span><i class='fas fa-comment-alt'> 2 Comments</i></span>
+                <span><i class="fas fa-share"> 18 Shares</i></span>
+            </div>
+        </div>
+        <div class="rightSidebar">
+            <div id="search">
+                <input name="search">
+                <button><i class="fa fa-search" aria-hidden="true"></i>Search</button>
+            </div>
+            <div class="leftSidebar" style="margin-top: 10px;height: 40%;">
+                <div class="first">
+                    <ul id="table1">
+                        <li><i class="fa fa-random" aria-hidden="true"><span>Dramatically Engage</span></i></li>
+                        <li>
+                            <div>
+                                <div id="f1">100% Prodacvtively Envisioned</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <div id="s">80% Objectively Innovated</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <div id="t">45% Portalled</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <div id="f4">35% Done</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="second">
+                <ul id="table2" style="list-style-type: none; padding-left: 0%;">
+                    <li>
+                        <i class="fas fa-bullhorn">Active Predomination</i>
+                    </li>
+                    <li>
+                        Objectively Innovate Empowered
+                        manufactured products whereas
+                        parllel platforms. Holisticity
+                        <br>
+                        <button>Resource</button>
+                        <button style="border-top: none;">Invision</button>
+                        <button>Niche</button>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="end">
+        <div class="endItem">
+            <h2 style="margin: 0%; font-family: Georgia, 'Times New Roman', Times, serif;font-weight: normal;">Dyanamic
+            </h2>
+            <p style="margin-top: 10px;">Phosfluorescently engaged worldwide methodologies with web enabled
+                technology. Interactively coordinate proactive e-commerce vis
+                process- centric "outside the box" thinking.
+            </p>
+            <button
+                style="background-color: white;border: none;border-radius: 3px;cursor: pointer;">Procrastinate</button>
+        </div>
+        <div class="endItem">
+            <h2 style="margin: 0%;"><i class="fas fa-wrench"><span
+                        style="font-size: normal;font-family: Georgia, 'Times New Roman', Times, serif; font-weight: normal;">
+                        Efficient</span></i>
+            </h2>
+            <p style="margin-top: 10px;">Phosfluorescently engaged worldwide methodologies with web enabled
+                technology. Interactively coordinate proactive e-commerce vis
+                process- centric "outside the box" thinking.
+            </p>
+            <button style="background-color: white;border: none;border-radius: 3px;cursor: pointer;">Unleash</button>
+        </div>
+        <div class="endItem">
+            <h2 style="margin: 0%; font-family: Georgia, 'Times New Roman', Times, serif;font-weight: normal;"><i
+                    class="fas fa-paperclip"><span
+                        style="font-size: normal;font-family: Georgia, 'Times New Roman', Times, serif; font-weight: normal;">
+                        Complete</span>
+                </i>
+            </h2>
+            <p style="margin-top: 10px;">Phosfluorescently engaged worldwide methodologies with web enabled
+                technology. Interactively coordinate proactive e-commerce vis
+                process- centric "outside the box" thinking.
+            </p>
+            <button style="background-color: white;border: none;border-radius: 3px;cursor: pointer;">Complete</button>
+        </div>
+        <div class="endItem">
+            <h2 style="margin: 0%; font-family: Georgia, 'Times New Roman', Times, serif;font-weight: normal;"><i
+                    class="fas fa-camera"><span
+                        style="font-size: normal;font-family: Georgia, 'Times New Roman', Times, serif; font-weight: normal;">
+                        Phosfluorescent</span>
+                </i>
+            </h2>
+            <div id="image">
+                <div class="i1">
+                    <div class="pimage1">
+                        <span style="padding-left: 24px;font-size: 18px;color: gray;">110x80</span>
+                    </div>
+                    <div class="pimage1">
+                        <span style="padding-left: 24px;font-size: 18px;color: gray;">110x81</span>
+                    </div>
+                </div>
+                <div class="i2">
+                    <div class="pimage1">
+                        <span style="padding-left: 24px;font-size: 18px;color: gray;">110x70</span>
+                    </div>
+                    <div class="pimage1">
+                        <span style="padding-left: 24px;font-size: 18px;color: gray;">110x71</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+</body>
+
+</html>
