@@ -15,9 +15,8 @@
 const depth = (arr, count) => {
     arr.forEach(element => {
         if (typeof element == 'object')
-            count = depth(element, count=count+1);
+            count = depth(element, count = count + 1);
     });
     return count;
 }
-
-console.log(`Depth of Given Array is: ${depth([1, [2, [3, [4]]]], 1)}`);
+console.log(`Depth of Given Array is: ${depth([1,[2, [3, 4]]],1)}`);

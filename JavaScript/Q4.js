@@ -6,9 +6,12 @@
 
 let finalProduct = (...elements) => {
     let initial = 0;
-    let sum = elements.reduce((prev,curr)=>prev+curr,initial);
-    sum = sum.toString();
+    let sum = elements.reduce((prev, curr) => prev + curr, initial);
 
+    if (sum < 0)
+        sum = sum * -1;
+    
+        sum = sum.toString();
     while (sum > 9) {
         let num = 1;
         for (let i = 0; i < sum.length; i++) {
@@ -19,4 +22,4 @@ let finalProduct = (...elements) => {
     return sum;
 
 }
-console.log(`Final Product is: ${finalProduct(90,8,41)}`);
+console.log(`Final Product is: ${finalProduct(10, -11)}`);

@@ -7,7 +7,7 @@
 
 // output: 3 boomerangs in this sequence:  [3, 7, 3], [1, 5, 1], [2, -2, 2]
 
-const input = [3, 7, 3, 2, 1, 5, 1, 2, 2, -2, 2];
+const input = [1,1,1,2,5,2];
 
 let boomerang = [];
 

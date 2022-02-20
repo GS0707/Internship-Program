@@ -3,10 +3,11 @@
 //  If there are no strings containing numbers, return an empty array.
 
 let filterStrings = (input) => {
-    return input.filter(str => /^\d+$/.test(str));
+    
+    return input.filter(str => /[0-9]+/.test(str));
 };
 
-let arrayStrings = ["Gajanan", "123", "Hello", "11", "12"];
+let arrayStrings = ["Gajanan", "123", "Hello", "11", "12A","a23"];
 
 let filterArray = filterStrings(arrayStrings)
 console.log(`Array with only the strings that have numbers:`);

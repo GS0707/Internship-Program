@@ -8,15 +8,12 @@ let countLoneOnes = number => {
 
     for (let i = 0; i < number.length; i++) {
 
-        if (number[i] !== '1')
-            continue
-
-        if ((number[i - 1] !== '1') && (number[i + 1] !== '1'))
+        if ((number[i] === '1') && (number[i - 1] !== '1') && (number[i + 1] !== '1'))
             count++;
     }
     return count;
 }
 
-let number = '110112121';
+let number = '1191321121231';
 
 console.log(`Lone 1s appear in a given number: ${countLoneOnes(number)}`);
