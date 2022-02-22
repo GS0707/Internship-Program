@@ -19,4 +19,4 @@ const depth = (arr, count) => {
     });
     return count;
 }
-console.log(`Depth of Given Array is: ${depth([1,[2, [3, 4]]],1)}`);
+console.log(`Depth of Given Array is: ${depth([1,[2], [3, 4,[2]]],1)}`);
